@@ -1,0 +1,202 @@
+@use "./veriables" as *;
+@use "./mixins" as *;
+
+.hero{
+    background-color: $theme-pink;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__card {
+        width: 50%;
+
+        &-title {
+            font-size: $heading-font-size;
+            font-weight: $heading-font-wight;
+            margin: 0rem;
+        }
+
+        &-intro {
+            width: 50%;
+        }
+
+        &-button {
+            @include button;
+        }     
+    }
+
+    &__img-card{
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        right: 9rem;
+        margin: 4rem;
+    }
+}
+
+.products{
+    background-color: $theme-gray;
+    text-align: center;
+
+    &__title{
+        font-size: $heading-font-size;
+        font-weight: $heading-font-wight;
+        padding-top: 3.6rem;
+        margin-top: 0;
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__card{
+        background-color: white;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 20%;
+        border-radius: 1rem;
+        box-shadow: 0 5px 9px -1px;
+        box-shadow: rgba(0,0,0,0.25);
+    }
+    
+    &__tag{
+        background-color: $theme-pink;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &__tag {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &__name {
+                font-size: $nav-heading-size;
+                font-weight: $nav-heading-wight;
+            }
+
+            * {
+                margin: 0;
+            }
+        }
+        &__price{
+            font-size: $nav-heading-size;
+            font-weight: $nav-heading-wight;
+            color: $theme-blue;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__button{
+        @include button;
+        display: inline-block;
+        margin: 5rem;
+        width: 13%;
+    }
+}
+
+.advert{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__texts{
+        width: 29%;
+
+        &__title{
+            font-size: $heading-font-size;
+            font-weight: $heading-font-wight;
+            margin-right: 0;
+        }
+        
+        &__img-box{
+            display: flex;
+            justify-content: space-between;
+            *{
+                width: 5rem;
+            }
+        }
+        &__button{
+            @include button;
+            margin-top: 2.5rem;
+        }
+    }
+
+    &__pics{
+        margin-top: 7rem;
+        width: 40rem;
+        height: 40rem;
+        background-image: url(../../asset/images/coldbrewbackground.png);
+        background-size: cover;
+        
+
+        &__boarder{
+            border: 5px solid $theme-blue;
+            width: 40rem ;
+            height: 40rem;
+            position: relative;
+            bottom: 2rem;
+            right: 2rem;
+        }
+
+        &__top{
+            position: relative;
+            left: 12rem;
+            top: 7rem;
+        }
+    }
+}
+
+.discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__text{
+        font-size: $heading-font-size;
+        font-weight: $heading-font-wight;
+        color: white;
+        background-color: $theme-graphite;
+        padding: 3rem;
+        margin-top: 15rem;
+    }
+}
+
+.footer{
+    background-color: $theme-pink;
+    display: flex;
+    justify-content: space-around;
+    padding: 4.5%;
+    margin-top: 5rem;
+
+    &__card{
+        *{
+            margin: 0;
+        }
+
+        &__title{
+            font-size: $nav-heading-size;
+            font-weight: $nav-heading-wight;
+            margin-bottom: 2rem;
+        }
+
+        &__img{
+            width: 4rem;
+        }
+    }
+    &__water-mark-1{
+        width: 10rem;
+        opacity: 25%;
+        position: absolute;
+        right: 136rem; bottom: -174rem; 
+    }
+
+    &__water-mark-2{
+        width: 10rem;
+        opacity: 25%;
+        position: absolute;
+        right: -2rem;  bottom: -185rem;
+    }
+}

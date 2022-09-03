@@ -1,0 +1,35 @@
+@use "./veriables" as *;
+
+.headers {
+    background-color: $theme-pink;
+    display: flex;
+    justify-content: space-between;
+    
+    &__logo-wraper{
+        display: inline-block;
+    }
+
+    &__title {
+        display: inline-block;
+        font-size: $heading-font-size;
+        font-weight: $heading-font-wight;
+    }
+
+    &__items {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+
+    &__item {
+        display: inline;
+        padding: 2rem;
+
+        &--link{
+            font-size: $nav-heading-size;
+            color: black;
+            text-decoration: none;
+        }
+    }
+}

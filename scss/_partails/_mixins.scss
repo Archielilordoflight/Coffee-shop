@@ -1,0 +1,12 @@
+@use "./veriables" as *;
+
+@mixin button {
+    background-color: $theme-blue;
+    font-size: 2.1rem;
+    font-weight: $nav-heading-wight;
+    color: $button-color;
+    padding: 2rem;
+    border-color: #393939;
+    box-shadow: 5px 5px $theme-blue,
+    inset 5px 5px $theme-pink;
+}
